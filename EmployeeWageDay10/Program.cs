@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computaion Day 10");
+            EmployeeAttendance.EmployeeCheck();
         }
     }
 }
