@@ -6,36 +6,40 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageDay10
 {
-    internal class PartTimeWages
+    internal class SwitchCase
     {
-        public static void PartTimeWageCheck()
+        public static void EmployeeWageSwitchCase()
         {
+            const int FULL_TIME = 1;
+            const int PART_TIME = 2;
+            const int EMP_RATE_PER_HR = 20;
+            int empHrs = 0, empWage = 0;
 
-            //Constants
-            int IS_PART_TIME = 1;
-            int IS_FULL_TIME = 2;
-            int EMP_RATE_PER_HOUR = 20;
-            //Variables
-            int empHrs = 0;
-            int empWage = 0;
+            Console.WriteLine("Welcome to EmployeeWage Computation");
+
+            //UC4- SwitchCase
             Random random = new Random();
-            //Computation
-            int empCheck = random.Next(0, 3);
-            if (empCheck == IS_PART_TIME)
+            int empAttendence = random.Next(0, 3); //0 or 1 or 2 it will generate
+            switch (empAttendence)
             {
-                empHrs = 4;
+                case FULL_TIME:
+                    Console.WriteLine("Full time employee is present");
+                    empHrs = 8;
+                    break;
+
+                case PART_TIME:
+                    Console.WriteLine("Part time employee is present");
+                    empHrs = 4;
+                    break;
+
+                default:
+                    Console.WriteLine("Employee is absent");
+                    break;
             }
-            else if (empCheck == IS_FULL_TIME)
-            {
-                empHrs = 8;
-            }
-            else
-            {
-                empHrs = 0;
-            }
-            empWage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Emp Wage : " + empWage);
+            empWage = empHrs * EMP_RATE_PER_HR;
+            //Console.WriteLine("Employee wage:"+empWage);  old way
+            Console.WriteLine("Employee Wage:{0}", empWage);  //new way
+            Console.ReadLine();
         }
     }
-
 }
