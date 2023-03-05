@@ -53,5 +53,4 @@ namespace EmployeeWageDay10
             Console.WriteLine("Total Number of Hours is  " + totalEmpHrs + ", Total Number of days is " + totalWorkingDays + ", Montly Wage of Emplyoee is " + empMontlyWage);
         }
     }
-}
    

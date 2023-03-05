@@ -12,6 +12,7 @@
             EmpWageForMultipleCompanies.EmpWage("TCS", 20, 15, 80);
             EmpWageForMultipleCompanies.EmpWage("BRIDGELAB", 15, 18, 100);
             Console.ReadLine();
+
         }
     }
 
