@@ -4,8 +4,7 @@
     {
         static void Main(string[] args)
         {
-
-            SwitchCase.EmployeeWageSwitchCase();
+            WageForMonths.EmpWageForMonthsCheck();
         }
     }
 }
